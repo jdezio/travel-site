@@ -707,29 +707,33 @@ a {
     }
   }
 
-/* Begin equal height rules */
+/* Begin Equal Height Rules */
 
 @media(min-width: 800px){
 
 .row--equal-height-at-medium {
       display: flex
+
   }
   }
 
-.row > div {
-    display: flex;
-  }
+.row--equal-height-at-medium > div {
+      float: none;
+      display: flex;
+    }
 
 @media(min-width: 1010px){
 
 .row--equal-height-at-large {
       display: flex
+
   }
   }
 
-.row > div {
-    display: flex;
-  }
+.row--equal-height-at-large > div {
+      float: none;
+      display: flex;
+    }
 
 .generic-content-container p {
     font-weight:300;
@@ -827,9 +831,9 @@ a {
 @media(min-width: 530px){
 
 .feature-item__title {
+      text-align: left;
       margin-top: 1em;
-      font-size: 1.875rem;
-      text-align: left
+      font-size: 1.875rem
   }
   }
 
@@ -1203,4 +1207,17 @@ a {
       font-size: 1rem;
       background-color: transparent
   }
+  }
+
+.reveal-item {
+  opacity: 0;
+  transition: all 1.5s ease-out;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.reveal-item--is-visible {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
